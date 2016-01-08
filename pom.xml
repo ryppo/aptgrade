@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.y3.aptgrade</groupId>
     <artifactId>aptgrade</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     <properties>
         <scmanager.final.version>1.0.0.0</scmanager.final.version>
