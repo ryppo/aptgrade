@@ -17,7 +17,7 @@ import javax.swing.border.TitledBorder;
 import net.java.dev.designgridlayout.DesignGridLayout;
 import org.neo4j.graphdb.Relationship;
 import org.y3.aptgrade.control.ApplicationController;
-import org.y3.aptgrade.model.ModelFactory;
+import org.y3.aptgrade.view.model.core.ModelFactory;
 import org.y3.aptgrade.view.i18n.Messages;
 
 /**

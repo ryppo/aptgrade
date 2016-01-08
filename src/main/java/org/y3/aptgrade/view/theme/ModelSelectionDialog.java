@@ -65,7 +65,7 @@ public class ModelSelectionDialog extends JDialog {
             JPanel jp_modelTypes = new JPanel(new FlowLayout());
             for (Iterator<String> it = keySet.iterator(); it.hasNext();) {
                 String key = it.next();
-                org.y3.aptgrade.model.ModelFactory modelFactory = (org.y3.aptgrade.model.ModelFactory) factoriesOfSelectableModelTypes.get(key);
+                org.y3.aptgrade.view.model.core.ModelFactory modelFactory = (org.y3.aptgrade.view.model.core.ModelFactory) factoriesOfSelectableModelTypes.get(key);
                 String modelType = modelFactory.getTranslatedModelType();
                 JButton jb_selectModelType = new JButton(modelType);
                 ActionListener al = new ActionListenerForModelTypeSelectionButton(modelFactory, this);

@@ -12,8 +12,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.commons.lang3.StringUtils;
 import org.y3.aptgrade.Application;
-import org.y3.aptgrade.model.ModelDictionary;
-import org.y3.aptgrade.model.ModelFactory;
+import org.y3.aptgrade.view.model.core.ModelDictionary;
+import org.y3.aptgrade.view.model.core.ModelFactory;
 import org.y3.aptgrade.view.i18n.Messages;
 
 /**

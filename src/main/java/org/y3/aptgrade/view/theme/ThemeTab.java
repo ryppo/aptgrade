@@ -18,7 +18,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import org.neo4j.graphdb.Relationship;
 import org.y3.aptgrade.control.ApplicationController;
-import org.y3.aptgrade.model.ModelFactory;
+import org.y3.aptgrade.view.model.core.ModelFactory;
 import org.y3.aptgrade.view.ApplicationFrame;
 import org.y3.aptgrade.view.DataView;
 import org.y3.aptgrade.view.i18n.Messages;

@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 import net.java.dev.designgridlayout.DesignGridLayout;
 import net.java.dev.designgridlayout.Tag;
 import org.y3.aptgrade.configuration.ApplicationConfiguration;
-import org.y3.aptgrade.model.ModelDictionary;
+import org.y3.aptgrade.view.model.core.ModelDictionary;
 import org.y3.aptgrade.view.i18n.Messages;
 
 /**

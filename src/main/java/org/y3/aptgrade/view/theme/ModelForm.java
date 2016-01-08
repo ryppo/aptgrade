@@ -19,7 +19,7 @@ import javax.swing.border.TitledBorder;
 import javax.swing.text.MaskFormatter;
 import net.java.dev.designgridlayout.DesignGridLayout;
 import org.apache.commons.lang3.StringUtils;
-import org.y3.aptgrade.model.FurtherModelContentPanel;
+import org.y3.aptgrade.view.model.core.FurtherModelContentPanel;
 import org.y3.aptgrade.view.ApplicationFrame;
 import org.y3.aptgrade.view.i18n.Messages;
 

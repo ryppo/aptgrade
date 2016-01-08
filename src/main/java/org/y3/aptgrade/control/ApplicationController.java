@@ -10,7 +10,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.neo4j.graphdb.Node;
 import org.y3.aptgrade.configuration.ApplicationConfiguration;
 import org.y3.aptgrade.helper.ZipHelper;
-import org.y3.aptgrade.model.ModelFactory;
+import org.y3.aptgrade.view.model.core.ModelFactory;
 import org.y3.aptgrade.view.i18n.Messages;
 
 /**

@@ -21,7 +21,7 @@ import javax.swing.JToolBar;
 import org.neo4j.graphdb.Relationship;
 import org.y3.aptgrade.configuration.ApplicationConfiguration;
 import org.y3.aptgrade.control.ApplicationController;
-import org.y3.aptgrade.model.ModelFactory;
+import org.y3.aptgrade.view.model.core.ModelFactory;
 import org.y3.aptgrade.view.gfx.Images;
 import org.y3.aptgrade.view.theme.ThemeTab;
 
