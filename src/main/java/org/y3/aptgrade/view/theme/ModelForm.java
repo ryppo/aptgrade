@@ -1,5 +1,6 @@
 package org.y3.aptgrade.view.theme;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.awt.Color;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -19,7 +20,6 @@ import javax.swing.text.MaskFormatter;
 import net.java.dev.designgridlayout.DesignGridLayout;
 import org.apache.commons.lang3.StringUtils;
 import org.y3.aptgrade.model.FurtherModelContentPanel;
-import org.y3.aptgrade.model.Model;
 import org.y3.aptgrade.view.ApplicationFrame;
 import org.y3.aptgrade.view.i18n.Messages;
 

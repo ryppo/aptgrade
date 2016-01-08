@@ -1,7 +1,8 @@
 package org.y3.aptgrade.model.goal;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
+import static com.sebn.gsd.aptgrade.core.database.Model.RESOURCE_KEY_DESCRIPTION;
 import org.neo4j.graphdb.Node;
-import org.y3.aptgrade.model.Model;
 
 /**
  *

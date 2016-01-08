@@ -1,5 +1,7 @@
 package org.y3.aptgrade.model.schoolfield;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
+import com.sebn.gsd.aptgrade.core.database.ModelFactory;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -9,8 +11,6 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.text.JTextComponent;
 import org.y3.aptgrade.model.FurtherModelContentPanel;
-import org.y3.aptgrade.model.Model;
-import org.y3.aptgrade.model.ModelFactory;
 import org.y3.aptgrade.model.grade.SchoolClassesGradesPanel;
 import org.y3.aptgrade.model.schoolclass.SchoolClass;
 import org.y3.aptgrade.model.year.Year;

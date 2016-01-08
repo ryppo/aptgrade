@@ -1,5 +1,6 @@
 package org.y3.aptgrade.model;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import javax.swing.JPanel;
 import org.y3.aptgrade.control.ApplicationController;
 import org.y3.aptgrade.view.i18n.Messages;

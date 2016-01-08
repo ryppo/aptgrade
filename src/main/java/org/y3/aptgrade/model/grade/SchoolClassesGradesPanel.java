@@ -1,12 +1,12 @@
 package org.y3.aptgrade.model.grade;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.Iterator;
 import javax.swing.JTabbedPane;
 import org.y3.aptgrade.control.ApplicationController;
 import org.y3.aptgrade.model.FurtherModelContentPanel;
-import org.y3.aptgrade.model.Model;
 import org.y3.aptgrade.model.pupil.Pupil;
 import org.y3.aptgrade.model.schoolclass.SchoolClass;
 import org.y3.aptgrade.model.schoolfield.SchoolField;

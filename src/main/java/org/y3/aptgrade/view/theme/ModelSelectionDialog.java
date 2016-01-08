@@ -1,5 +1,8 @@
 package org.y3.aptgrade.view.theme;
 
+import com.sebn.gsd.aptgrade.core.database.DatabaseException;
+import com.sebn.gsd.aptgrade.core.database.Model;
+import com.sebn.gsd.aptgrade.core.database.ModelFactory;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Frame;
@@ -13,6 +16,8 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -24,8 +29,6 @@ import javax.swing.JRootPane;
 import javax.swing.JScrollPane;
 import javax.swing.KeyStroke;
 import org.y3.aptgrade.control.ApplicationController;
-import org.y3.aptgrade.model.Model;
-import org.y3.aptgrade.model.ModelFactory;
 import org.y3.aptgrade.view.i18n.Messages;
 
 /**
@@ -62,7 +65,7 @@ public class ModelSelectionDialog extends JDialog {
             JPanel jp_modelTypes = new JPanel(new FlowLayout());
             for (Iterator<String> it = keySet.iterator(); it.hasNext();) {
                 String key = it.next();
-                ModelFactory modelFactory = factoriesOfSelectableModelTypes.get(key);
+                org.y3.aptgrade.model.ModelFactory modelFactory = (org.y3.aptgrade.model.ModelFactory) factoriesOfSelectableModelTypes.get(key);
                 String modelType = modelFactory.getTranslatedModelType();
                 JButton jb_selectModelType = new JButton(modelType);
                 ActionListener al = new ActionListenerForModelTypeSelectionButton(modelFactory, this);
@@ -150,17 +153,23 @@ class ActionListenerForModelTypeSelectionButton implements ActionListener {
         modelTypeSelectionDialog = _modelTypeSelectionDialog;
     }
     
+    @Override
     public void actionPerformed(ActionEvent e) {
-        modelTypeSelectionDialog.setFactoryOfSelectedModelType(factoryOfSelectableModelType);
-        DefaultListModel<Model> modelListModel = new DefaultListModel<>();
-        ArrayList<Model> models = modelTypeSelectionDialog.getController().getAllModels();
-        Collections.sort(models);
-        for (Iterator<Model> it = models.iterator(); it.hasNext();) {
-            Model model = it.next();
-            if (model != null && factoryOfSelectableModelType != null && model.getModelType() != null && model.getModelType().equals(factoryOfSelectableModelType.getModelType())) {
-                modelListModel.addElement(model);
+        try {
+            modelTypeSelectionDialog.setFactoryOfSelectedModelType(factoryOfSelectableModelType);
+            DefaultListModel<Model> modelListModel = new DefaultListModel<>();
+            ArrayList<Model> models = modelTypeSelectionDialog.getController().getAllModels();
+            Collections.sort(models);
+            for (Iterator<Model> it = models.iterator(); it.hasNext();) {
+                Model model = it.next();
+                if (model != null && factoryOfSelectableModelType != null && model.getModelType() != null && model.getModelType().equals(factoryOfSelectableModelType.getModelType())) {
+                    modelListModel.addElement(model);
+                }
             }
+            modelTypeSelectionDialog.getModelList().setModel(modelListModel);
+        } catch (DatabaseException ex) {
+            Logger.getLogger(ActionListenerForModelTypeSelectionButton.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
-        modelTypeSelectionDialog.getModelList().setModel(modelListModel);
     }
 }

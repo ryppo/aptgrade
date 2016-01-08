@@ -1,7 +1,7 @@
 package org.y3.aptgrade.view.theme;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import javax.swing.JPanel;
-import org.y3.aptgrade.model.Model;
 
 /**
  *

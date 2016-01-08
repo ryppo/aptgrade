@@ -1,9 +1,9 @@
 package org.y3.aptgrade.view.theme;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ListModel;
 import org.apache.commons.lang3.ArrayUtils;
-import org.y3.aptgrade.model.Model;
 
 public abstract class ModelListModel extends DefaultComboBoxModel implements
 		ListModel {

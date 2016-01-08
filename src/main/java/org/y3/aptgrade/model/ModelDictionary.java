@@ -1,5 +1,6 @@
 package org.y3.aptgrade.model;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.util.ArrayList;
 import org.y3.aptgrade.model.asset.Asset;
 import org.y3.aptgrade.model.asset.AssetForm;

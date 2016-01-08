@@ -1,14 +1,15 @@
 package org.y3.aptgrade.control;
 
+import com.sebn.gsd.aptgrade.core.database.DatabaseException;
+import com.sebn.gsd.aptgrade.core.database.GraphDatabase;
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import org.apache.commons.lang3.StringUtils;
 import org.neo4j.graphdb.Node;
 import org.y3.aptgrade.configuration.ApplicationConfiguration;
-import org.y3.aptgrade.database.GraphDatabase;
 import org.y3.aptgrade.helper.ZipHelper;
-import org.y3.aptgrade.model.Model;
 import org.y3.aptgrade.model.ModelFactory;
 import org.y3.aptgrade.view.i18n.Messages;
 
@@ -119,7 +120,7 @@ public class ApplicationController {
         return database != null && database.isDatabaseOnline();
     }
     
-    public ArrayList<Model> getAllModels() {
+    public ArrayList<Model> getAllModels() throws DatabaseException {
         ArrayList<Model> models = new ArrayList<>();
         if (isDatabaseOnline()) {
             models = database.getAllModels(true);
@@ -140,7 +141,7 @@ public class ApplicationController {
         return convertedModelList;
     }
     
-    public Model createModel(ModelFactory targetModelFactory) {
+    public Model createModel(ModelFactory targetModelFactory) throws DatabaseException {
         return targetModelFactory.createModelFromNode(database.createNode(targetModelFactory.getModelType()));
     }
     
@@ -148,7 +149,7 @@ public class ApplicationController {
         database.deleteNode(modelToDelete.getUnderlyingNode());
     }
     
-    public void debugDatabaseToConsole() {
+    public void debugDatabaseToConsole() throws DatabaseException {
         database.listAllNodesToConsole();
         database.listAllModelsToConsole();
     }

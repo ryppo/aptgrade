@@ -1,5 +1,6 @@
 package org.y3.aptgrade.view.theme;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -17,7 +18,6 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import org.neo4j.graphdb.Relationship;
 import org.y3.aptgrade.control.ApplicationController;
-import org.y3.aptgrade.model.Model;
 import org.y3.aptgrade.view.ApplicationFrame;
 import org.y3.aptgrade.view.i18n.Messages;
 

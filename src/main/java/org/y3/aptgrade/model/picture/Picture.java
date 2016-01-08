@@ -1,8 +1,8 @@
 package org.y3.aptgrade.model.picture;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.awt.Image;
 import org.neo4j.graphdb.Node;
-import org.y3.aptgrade.model.Model;
 
 /**
  *

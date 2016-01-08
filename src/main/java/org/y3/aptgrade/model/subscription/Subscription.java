@@ -1,8 +1,8 @@
 package org.y3.aptgrade.model.subscription;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.util.Date;
 import org.neo4j.graphdb.Node;
-import org.y3.aptgrade.model.Model;
 
 /**
  *

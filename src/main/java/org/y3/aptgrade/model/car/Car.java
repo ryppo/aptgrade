@@ -1,7 +1,7 @@
 package org.y3.aptgrade.model.car;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import org.neo4j.graphdb.Node;
-import org.y3.aptgrade.model.Model;
 
 /**
  *

@@ -1,5 +1,6 @@
 package org.y3.aptgrade.view.theme;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.event.MouseEvent;
@@ -10,7 +11,6 @@ import javax.swing.DefaultListModel;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
-import org.y3.aptgrade.model.Model;
 import org.y3.aptgrade.view.ApplicationFrame;
 
 /**

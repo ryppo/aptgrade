@@ -1,8 +1,8 @@
 package org.y3.aptgrade.model.workingtime;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.util.Date;
 import org.neo4j.graphdb.Node;
-import org.y3.aptgrade.model.Model;
 
 /**
  *

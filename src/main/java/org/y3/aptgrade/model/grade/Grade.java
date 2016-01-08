@@ -1,8 +1,8 @@
 package org.y3.aptgrade.model.grade;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import org.neo4j.graphdb.Node;
 import org.neo4j.graphdb.RelationshipType;
-import org.y3.aptgrade.model.Model;
 import org.y3.aptgrade.model.pupil.Pupil;
 import org.y3.aptgrade.model.schoolclass.SchoolClass;
 import org.y3.aptgrade.model.schoolfield.SchoolField;

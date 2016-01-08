@@ -1,8 +1,8 @@
 package org.y3.aptgrade.model.schoolclass;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.util.List;
 import static org.y3.aptgrade.model.FurtherModelContentPanel.MESSAGES;
-import org.y3.aptgrade.model.Model;
 import org.y3.aptgrade.model.ModelTableModel;
 
 /**

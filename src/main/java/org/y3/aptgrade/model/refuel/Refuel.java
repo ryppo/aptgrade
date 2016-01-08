@@ -1,9 +1,9 @@
 package org.y3.aptgrade.model.refuel;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.util.Date;
 import org.neo4j.graphdb.Node;
 import org.neo4j.graphdb.RelationshipType;
-import org.y3.aptgrade.model.Model;
 
 /**
  *

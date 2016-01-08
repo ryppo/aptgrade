@@ -1,5 +1,6 @@
 package org.y3.aptgrade.view.theme;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.awt.BorderLayout;
 import java.awt.Component;
 import javax.swing.JLabel;
@@ -7,7 +8,6 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.ListCellRenderer;
 import javax.swing.border.TitledBorder;
-import org.y3.aptgrade.model.Model;
 
 /**
  *

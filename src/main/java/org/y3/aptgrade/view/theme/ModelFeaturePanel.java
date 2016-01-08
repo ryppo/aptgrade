@@ -1,17 +1,20 @@
 package org.y3.aptgrade.view.theme;
 
+import com.sebn.gsd.aptgrade.core.database.DatabaseException;
+import com.sebn.gsd.aptgrade.core.database.Model;
+import com.sebn.gsd.aptgrade.core.database.Model.RelTypes;
+import com.sebn.gsd.aptgrade.core.database.ModelFactory;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import org.neo4j.graphdb.Relationship;
 import org.y3.aptgrade.control.ApplicationController;
-import org.y3.aptgrade.database.GraphDatabase;
-import org.y3.aptgrade.model.Model;
-import org.y3.aptgrade.model.ModelFactory;
 import org.y3.aptgrade.view.i18n.Messages;
 
 /**
@@ -42,7 +45,13 @@ public class ModelFeaturePanel extends JPanel {
         jb_new.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Model newModel = controller.createModel(themeTab.getModelFactory());
+                Model newModel = null;
+                try {
+                    newModel = controller.createModel(themeTab.getModelFactory());
+                } catch (DatabaseException ex) {
+                    Logger.getLogger(ModelFeaturePanel.class.getName()).log(Level.SEVERE, null, ex);
+                    ex.printStackTrace();
+                }
                 modelForm.setModel(newModel);
                 themeTab.refreshModelList(newModel);
             }
@@ -81,7 +90,7 @@ public class ModelFeaturePanel extends JPanel {
                 modelTypeSelector.setVisible(true);
                 Model selectedModel = modelTypeSelector.getSelectedModel();
                 if (selectedModel != null) {
-                    modelForm.getModel().addRelationShipToModel(selectedModel, GraphDatabase.RelTypes.BELONGS_TO);
+                    modelForm.getModel().addRelationShipToModel(selectedModel, RelTypes.BELONGS_TO);
                 }
                 themeTab.refreshModelRelations(modelForm.getModel());
             }

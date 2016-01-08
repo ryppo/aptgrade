@@ -1,5 +1,6 @@
 package org.y3.aptgrade.view.theme;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -16,7 +17,6 @@ import javax.swing.border.TitledBorder;
 import net.java.dev.designgridlayout.DesignGridLayout;
 import org.neo4j.graphdb.Relationship;
 import org.y3.aptgrade.control.ApplicationController;
-import org.y3.aptgrade.model.Model;
 import org.y3.aptgrade.model.ModelFactory;
 import org.y3.aptgrade.view.i18n.Messages;
 

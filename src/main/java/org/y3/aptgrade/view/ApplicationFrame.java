@@ -1,5 +1,6 @@
 package org.y3.aptgrade.view;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dimension;
@@ -20,7 +21,6 @@ import javax.swing.JToolBar;
 import org.neo4j.graphdb.Relationship;
 import org.y3.aptgrade.configuration.ApplicationConfiguration;
 import org.y3.aptgrade.control.ApplicationController;
-import org.y3.aptgrade.model.Model;
 import org.y3.aptgrade.model.ModelFactory;
 import org.y3.aptgrade.view.gfx.Images;
 import org.y3.aptgrade.view.theme.ThemeTab;

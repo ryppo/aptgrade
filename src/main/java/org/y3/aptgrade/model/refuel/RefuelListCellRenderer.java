@@ -1,8 +1,8 @@
 package org.y3.aptgrade.model.refuel;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
-import org.y3.aptgrade.model.Model;
 import org.y3.aptgrade.view.i18n.Messages;
 import org.y3.aptgrade.view.theme.ModelListCellPanel;
 

@@ -1,5 +1,6 @@
 package org.y3.aptgrade.model;
 
+import com.sebn.gsd.aptgrade.core.database.Model;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.InvocationTargetException;
